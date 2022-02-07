@@ -1,3 +1,4 @@
+import React from 'react'
 import './styles.css';
 import { ReactComponent as YoutubeImage } from './youtube.svg';
 import { ReactComponent as LinkedinImage } from './linkedin.svg';
