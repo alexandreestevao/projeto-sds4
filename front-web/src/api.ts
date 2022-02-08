@@ -1,7 +1,7 @@
 import axios from "axios";
 import { OrderPayLoad } from "./Orders/types";
 
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = process.env.REACT_APP_API_URL;
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
 
 export function fetchProducts() {
@@ -13,5 +13,5 @@ export function fetchLocalMapBox(local: string) {
 }
 
 export function saveOrder(payLoad: OrderPayLoad) {
-    return axios.post(`${BASE_URL}/orders123`, payLoad);
+    return axios.post(`${BASE_URL}/orders`, payLoad);
 }
